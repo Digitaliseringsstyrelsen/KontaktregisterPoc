@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0052)http://dl.dropbox.com/u/4591719/power/powerboard.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+
+	<title> Contact Registry - Kontaktregister v.0.6.0 </title>
+
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700'
+		rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" type="image/x-icon"
+			href="http://digitaliser.dk/resource/480898/artefact/favkage.ico">
+			<style type="text/css">
+body {
+	padding: 0px;
+	font-family: "Ubuntu", sans-serif;
+	}
+
+.klassenavn{
+	background-color: #4FCAFC;
+	border: 1px solid #4FCAFC;
+	clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+	padding: .5em .5em; 
+	margin: 1.5em;
+	color:#FFF;
+	
+	}
+
+
+.klassekasse{
+	background-color: #B0DAF9;
+	border: 1px solid #B0DAF9;
+	border-radius: 5px;
+	padding: .5em .5em; 
+	margin: 1.5em;
+	}
+
+.engelskelementnavn{
+  	margin-left:2em;
+	 }
+
+
+.egenskabnavn {
+	border: 2px #1D83CF;
+	border-style: hidden hidden dashed dashed;
+	border-radius: 5px;
+	padding: .2em .5em; 
+	margin: .2em; 
+	}
+
+
+.egenskaber {
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: .5em 1em; 
+	margin: .5em; 
+	}
+
+.datatypeegenskaber {
+	background-color: #eee;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	padding: .5em 1em; 
+	margin: .5em; 
+	}
+
+.typedesignation{
+	font-size: 75%;
+}
+
+li{
+	font-size: 75%;
+	}	
+	
+
+.objektegenskaber {
+	background-color: #eee;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	padding: .5em 1em; 
+	margin: .5em; 
+	}
+
+
+#container {
+	background-color: #FFF;
+	border: 1px solid #AD6401;
+	border-radius: 20px;
+	margin: 1%; 
+	}
+
+</style>
+</head>
+
+
+<h1><b>Modelpakke: Contact Registry - Kontaktregister v.0.6.0</b>
+ </h1><br/>
+
+Beskrivelse:
+<ul>
+<li><b>approvalStatus </b>: awaiting approval</li>
+<li><b>comment (da) </b>: Kontaktregister udgør det samlede register over de kontaktoplysninger som personer og virksomheder har angivet  i forbindelse med tilmelding til Digital Post-advisering og/eller NemSMS.</li>
+<li><b>comment (en) </b>: supplerende bemærkning eller oplysning vedrørende elementet - på engelsk</li>
+<li><b>label (da) </b>: Kontaktregister</li>
+<li><b>label (en) </b>: Contact Registry</li>
+<li><b>legalSource </b>: https://www.retsinformation.dk/eli/lta/2016/801,https://www.retsinformation.dk/eli/lta/2013/1553</li>
+<li><b>modelStatus </b>: development</li>
+<li><b>modified </b>: 28-09-2017</li>
+<li><b>namespace </b>: http://data.gov.dk/model/ap/apcontactregistry</li>
+<li><b>namespacePrefix </b>: apcr</li>
+<li><b>publisher </b>: Digitaliseringsstyrelsen</li>
+<li><b>theme </b>: 06.38.10.20 Tværgående it-løsninger til den digitale infrastruktur </li>
+<li><b>versionInfo </b>: 0.6.0</li>
+ 
+</ul>
+<div class="klassekasse">
+<h2><span class="klassenavn">Class:Kontaktprofil </span></h2>
+<span class="engelskelementnavn"><i>(ContactProfile)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+<li><b> altLabel (da) </b>: brugerprofil</li>
+ <li><b> altLabel (en) </b>: user</li>
+ 
+ 
+ <li><b> comment (da) </b>: Profil udgør kontaktoplysninger og abonnementstilmeldinger for borgere hhv. virksomheder.</li>
+  <li><b> definition (da) </b>: profil som udgøres af en samling af kontaktrelaterede egenskaber vedrørende hvordan en bestemt bruger kan modtager digitale meddelelser
+</li>
+           <li><b> prefLabel (da) </b>: kontaktprofil</li>
+ <li><b> prefLabel (en) </b>: contact profile</li>
+     </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+<h5><span class="egenskabnavn">gældendeFritagelse  <i>(applicableExcemption) </i>(->Fritagelse )  </span></h5>
+Beskrivelse:
+<ul>
+
+
+</ul>
+ <h5><span class="egenskabnavn">ejer  <i>(owner) </i>(->cvr:Virksomhed )  </span></h5>
+Beskrivelse:
+<ul>
+
+
+<li><b> prefLabel (da) </b>: virksomhedskontaktprofil</li>
+<li><b> prefLabel (en) </b>: owned contact profile</li>
+<li><b> prefLabel (da) </b>: ejer</li>
+<li><b> prefLabel (en) </b>: owner</li>
+</ul>
+ <h5><span class="egenskabnavn">registreretKontaktoplysning  <i>(registeredContactInfo) </i>(->Kontaktoplysning )  </span></h5>
+Beskrivelse:
+<ul>
+
+
+<li><b> prefLabel (da) </b>: registreret kontaktoplysning</li>
+<li><b> prefLabel (en) </b>: registered contact information</li>
+<li><b> prefLabel (en) </b>: registered contact info</li>
+<li><b> prefLabel (da) </b>: registreret kontaktoplysning</li>
+</ul>
+ <h5><span class="egenskabnavn">ejer  <i>(owner) </i>(->cpr:Person )  </span></h5>
+Beskrivelse:
+<ul>
+
+
+<li><b> prefLabel (da) </b>: ejer</li>
+<li><b> prefLabel (en) </b>: owner</li>
+<li><b> definition (da) </b>: den kontakprofil som en given aktør ejer</li>
+</ul>
+ <h5><span class="egenskabnavn">tredjepartsabonnement  <i>(thirdpartySubscription) </i>(->Abonnement )  </span></h5>
+Beskrivelse:
+<ul>
+
+
+<li><b> prefLabel (da) </b>: tredjepartsabonnement</li>
+<li><b> prefLabel (en) </b>: third party subscription</li>
+<li><b> prefLabel (en) </b>: thirdparty subscription</li>
+<li><b> prefLabel (da) </b>: tredjepartsabonnement</li>
+<li><b> definition (da) </b>: abonnement tilhørende tredjepart som en given bruger er tilknyttet og derfor modtager digitale meddelser på vegne af</li>
+</ul>
+ <h5><span class="egenskabnavn">tilmeldtAbonnement  <i>(ownedSubscription) </i>(->Abonnement )  </span></h5>
+Beskrivelse:
+<ul>
+<li><b> prefLabel (da) </b>: tilmeldt abonnement</li>
+
+
+<li><b> prefLabel (en) </b>: owned subscription</li>
+<li><b> definition (en) </b>: det abonnnement som en aktør via en kontaktprofil har tilmeldt sig og har fuld råderet over</li>
+</ul>
+  
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn">identifikator (<i>dct:identifier</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> rdfs:Literal </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: entydig reference til den givne ressource i en bestemt kontekst</li>
+<li><b> definition (en) </b>: An unambiguous reference to the resource within a given context.</li>
+<li><b> prefLabel (da) </b>: identifikator</li>
+<li><b> prefLabel (en) </b>: identifier</li>
+<li><b> URI </b>: http://purl.org/dc/terms/identifier</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ <div class="klassekasse">
+<h2><span class="klassenavn">Class:Kontaktoplysning </span></h2>
+<span class="engelskelementnavn"><i>(ContactInformation)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+<li><b> altLabel (da) </b>: kontaktinformation;kommunikationsmedie; medie</li>
+ <li><b> altLabel (en) </b>: contact information;media</li>
+ 
+ 
+ <li><b> comment (da) </b>: Kontaktoplysninger er de verificerede informationer der udgør en borgers eller virksomheds samlede profil. </li>
+  <li><b> definition (da) </b>: oplysning der kan anvendes til at kontakte en bestemt aktør</li>
+ <li><b> definition (en) </b>: information which can be used to contact a person, organisation or other actor</li>
+    <li><b> example (da) </b>: navn@domæne.dk, </li>
+      <li><b> prefLabel (da) </b>: kontaktoplysning</li>
+ <li><b> prefLabel (en) </b>: contact information</li>
+     </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+<h5><span class="egenskabnavn">type  <i>(dct:type) </i>(->Kontaktoplysningstype )  </span></h5>
+Beskrivelse:
+<ul>
+
+
+<li><b> prefLabel (da) </b>: type</li>
+<li><b> prefLabel (en) </b>: type</li>
+</ul>
+  
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn">kontaktoplysning (<i>contactInfo</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> rdfs:Literal/json </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: datastreng som kan anvendes til at kontakte en bestemt aktør</li>
+<li><b> prefLabel (da) </b>: kontaktoplysning</li>
+<li><b> prefLabel (en) </b>: contact information</li>
+ 
+</ul>
+<h5><span class="egenskabnavn">verifikationsdato (<i>verificationDate</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> xsd:dateTime </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: det tidspunkt hvor rigtigheden af en given oplysning blev påvist</li>
+<li><b> prefLabel (da) </b>: verifikationsdato</li>
+<li><b> prefLabel (en) </b>: verification date</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ <div class="klassekasse">
+<h2><span class="klassenavn">Class:Kontaktoplysningstype </span></h2>
+<span class="engelskelementnavn"><i>(ContactInfoType)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+<li><b> altLabel (da) </b>: medietype</li>
+ <li><b> altLabel (en) </b>: media type</li>
+ 
+ 
+   <li><b> definition (da) </b>: klassifikation af kontaktoplysning</li>
+           <li><b> prefLabel (da) </b>: kontaktoplysningstype</li>
+ <li><b> prefLabel (en) </b>: contact info type</li>
+  <li><b> subClassOf </b>: http://www.w3.org/2004/02/skos/core#Concept</li>
+   </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+ 
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn">betegnelse (<i>rdfs:label</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> rdfs:Literal </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: ord der navngiver en ressource</li>
+<li><b> eget </b>: nej</li>
+<li><b> prefLabel (da) </b>: betegnelse</li>
+<li><b> prefLabel (en) </b>: label</li>
+<li><b> URI </b>: http://www.w3.org/2000/01/rdf-schema#label</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ <div class="klassekasse">
+<h2><span class="klassenavn">Class:DigitalPostFritagelsesgrund </span></h2>
+<span class="engelskelementnavn"><i>(DigitalPostExcemptionCause)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+  
+ 
+ <li><b> comment (da) </b>: Den relevante myndighed træffer afgørelse om fritagelse på baggrund af gyldige og dokumenterede fritagelsesgrunde</li>
+  <li><b> definition (da) </b>: klassifikation af myndighedsgodkendte fritagelsesårsager for tilslutning til Offentlig Digital Post </li>
+          <li><b> legalSource </b>: https://www.retsinformation.dk/eli/lta/2013/1553</li>
+ <li><b> prefLabel (da) </b>: Digital Post-fritagelsesgrund</li>
+ <li><b> prefLabel (en) </b>: Digital Post excemption cause</li>
+     </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+ 
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn">betegnelse (<i>rdfs:label</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> rdfs:Literal </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: ord der navngiver en ressource</li>
+<li><b> eget </b>: nej</li>
+<li><b> prefLabel (da) </b>: betegnelse</li>
+<li><b> prefLabel (en) </b>: label</li>
+<li><b> URI </b>: http://www.w3.org/2000/01/rdf-schema#label</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ <div class="klassekasse">
+<h2><span class="klassenavn">Class:Fritagelse </span></h2>
+<span class="engelskelementnavn"><i>(Exception)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+<li><b> altLabel (da) </b>: fritagelsesperiode</li>
+ <li><b> altLabel (en) </b>: excemption period</li>
+ 
+ 
+   <li><b> definition (da) </b>: periode hvor en aktør slipper for bestemte forpligtelser eller begrænsninger</li>
+           <li><b> prefLabel (da) </b>: fritagelse</li>
+ <li><b> prefLabel (en) </b>: excemption</li>
+     </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+<h5><span class="egenskabnavn">gældendeDigitalPostFritagelsesgrund  <i>(applicableDigitalPostExcemptionCause) </i>(->DigitalPostFritagelsesgrund )  </span></h5>
+Beskrivelse:
+<ul>
+
+
+<li><b> definition (da) </b>: den årsag der er gældende for en given fritagelse fra Digital Post</li>
+</ul>
+  
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn"> (<i>startDate</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> xsd:dateTime </span><br/>
+<ul>
+<li><b> altLabel (da) </b>: starttidspunkt</li>
+
+
+<li><b> definition (da) </b>: tidspunkt for en entitets igangsættelse</li>
+<li><b> eget  </b>: nej</li>
+<li><b> prefLabel (da) </b>: startdato</li>
+<li><b> prefLabel (en) </b>: start date</li>
+<li><b> URI </b>: http://schema.org/startDate</li>
+ 
+</ul>
+<h5><span class="egenskabnavn"> (<i>endDate</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> xsd:dateTime </span><br/>
+<ul>
+<li><b> altLabel (da) </b>: sluttidspunkt</li>
+
+
+<li><b> definition (da) </b>: tidspunkt for en entitets ophør</li>
+<li><b> eget </b>: nej</li>
+<li><b> prefLabel (da) </b>: slutdato</li>
+<li><b> prefLabel (en) </b>: end date</li>
+<li><b> URI </b>: http://schema.org/endDate</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ <div class="klassekasse">
+<h2><span class="klassenavn">Class:Abonnement </span></h2>
+<span class="engelskelementnavn"><i>(Subscription)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+<li><b> altLabel (da) </b>: abonnement </li>
+  
+ 
+ <li><b> comment (da) </b>: Abonnement udgør en aftale med tilhørende aftalevilkår mellem bruger og Digitaliseringsstyrelsen om, at bruger løbende kan modtage hhv. NemSMS, Digital Post samt Digital Post Adviseringer.</li>
+  <li><b> definition (da) </b>: aftale om at en aktør løbende kan modtage en bestemt ydelse</li>
+          <li><b> legalSource </b>: https://www.retsinformation.dk/eli/lta/2016/801</li>
+ <li><b> prefLabel (da) </b>: abonnement</li>
+ <li><b> prefLabel (en) </b>: subscription</li>
+     </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+<h5><span class="egenskabnavn">accepteretVilkår  <i>(acceptedTerms) </i>(->Vilkår )  </span></h5>
+Beskrivelse:
+<ul>
+<li><b> prefLabel (en) </b>: accepted terms</li>
+
+
+<li><b> prefLabel (da) </b>: accepteret vilkår</li>
+<li><b> definition (da) </b>: vilkår som er accepteret i forbindelse med en bestemt aftale</li>
+</ul>
+ <h5><span class="egenskabnavn">valgtKontaktoplysning  <i>(selectedContactInformation) </i>(->Kontaktoplysning )  </span></h5>
+Beskrivelse:
+<ul>
+<li><b> prefLabel (en) </b>: selected contact information</li>
+
+
+<li><b> prefLabel (da) </b>: valgt kontaktoplysning</li>
+<li><b> definition (da) </b>: kontaktoplysning som er udvalgt i forbindelse med et givet abonnement</li>
+</ul>
+ <h5><span class="egenskabnavn">valgtAbonnementstype  <i>(selectedSubscriptiontype) </i>(->Abonnementstype )  </span></h5>
+Beskrivelse:
+<ul>
+<li><b> prefLabel (da) </b>: valgt abonnementstype</li>
+
+
+<li><b> prefLabel (en) </b>: selected subscriptiontype</li>
+<li><b> definition (da) </b>: den abonnementstype som et givet abonnement kan klassificeres som</li>
+</ul>
+  
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn">startdato (<i>schema:startDate</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> xsd:dateTime </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: tidspunkt for en entitets igangsættelse</li>
+<li><b> definition (en) </b>: The start date and time of the item (in ISO 8601 date format).</li>
+<li><b> eget </b>: nej</li>
+<li><b> prefLabel (da) </b>: startdato</li>
+<li><b> prefLabel (en) </b>: start date</li>
+<li><b> URI </b>: http://schema.org/startDate</li>
+ 
+</ul>
+<h5><span class="egenskabnavn">slutdato (<i>schema:endDate</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> xsd:dateTime </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: tidspunkt for en entitets ophør</li>
+<li><b> definition (en) </b>: The end date and time of the item (in ISO 8601 date format).</li>
+<li><b> eget </b>: nej</li>
+<li><b> prefLabel (da) </b>: slutdato</li>
+<li><b> prefLabel (en) </b>: end date</li>
+<li><b> URI </b>: http://schema.org/endDate</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ <div class="klassekasse">
+<h2><span class="klassenavn">Class:Abonnementstype </span></h2>
+<span class="engelskelementnavn"><i>(SubscriptionType)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+<li><b> altLabel (da) </b>: Digital Post-abonnementstype</li>
+ <li><b> altLabel (en) </b>: subscription type</li>
+ 
+ 
+   <li><b> definition (da) </b>: klassifikation af Digital-Post-abonnementer</li>
+           <li><b> prefLabel (da) </b>: abonnementstype</li>
+ <li><b> prefLabel (en) </b>: subscription type</li>
+     </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+<h5><span class="egenskabnavn">gældendeVilkår  <i>(applicableTerms) </i>(->Vilkår )  </span></h5>
+Beskrivelse:
+<ul>
+<li><b> prefLabel (da) </b>: gældende vilkår</li>
+<li><b> prefLabel (en) </b>: applicable terms</li>
+
+
+<li><b> definition (da) </b>: villkår som er tilknyttet et bestemt aftaletype</li>
+</ul>
+  
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn">betegnelse (<i>rdfs:label</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> rdfs:Literal </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: ord der navngiver en ressource</li>
+<li><b> eget </b>: nej</li>
+<li><b> prefLabel (da) </b>: betegnelse</li>
+<li><b> prefLabel (en) </b>: label</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ <div class="klassekasse">
+<h2><span class="klassenavn">Class:Vilkår </span></h2>
+<span class="engelskelementnavn"><i>(TermsOfUse)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+<li><b> altLabel (da) </b>: anvendelsesvilkår; abonnementsvilkår</li>
+ <li><b> altLabel (en) </b>: terms and conditions; terms</li>
+ 
+ 
+   <li><b> definition (da) </b>: omstændighed som er bestemmende for og som udgør en integreret del af en aftale
+
+</li>
+ <li><b> definition (en) </b>: circumstance that control and limits how something is carried out</li>
+   <li><b> eget </b>: nej</li>
+        <li><b> prefLabel (da) </b>: vilkår</li>
+ <li><b> prefLabel (en) </b>: terms of use</li>
+     </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+ 
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn">samtykketekst (<i>consentText</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> rdfs:Literal </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: tekst som udtrykker det samtykke som en aktør giver ifm. med accept af vilkårene for en given aftale </li>
+<li><b> prefLabel (da) </b>: samtykketekst</li>
+<li><b> prefLabel (en) </b>: consent text</li>
+ 
+</ul>
+<h5><span class="egenskabnavn">versionsnummer (<i>owl:versionInfo</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> rdfs:Literal </span><br/>
+<ul>
+
+
+<li><b> definition (da) </b>: unik identifikation af en specifik version</li>
+<li><b> definition (en) </b>: The annotation property that provides version information for an ontology or another OWL construct</li>
+<li><b> eget </b>: nej</li>
+<li><b> prefLabel (da) </b>: versionsnummer</li>
+<li><b> prefLabel (en) </b>: version info</li>
+<li><b> URI </b>: http://www.w3.org/2002/07/owl#versionInfo</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ <div class="klassekasse">
+<h2><span class="klassenavn">Class:cpr:Person </span></h2>
+<span class="engelskelementnavn"><i>(cpr:Person)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+<li><b> altLabel (da) </b>: CPR-person</li>
+  
+ 
+   <li><b> definition (da) </b>: Person der er registreret i CPR med personnummer.</li>
+    <li><b> eget </b>: nej</li>
+       <li><b> legalSource </b>: https://www.retsinformation.dk/eli/lta/2017/646</li>
+ <li><b> prefLabel (da) </b>: person</li>
+ <li><b> prefLabel (en) </b>: person</li>
+     </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+ 
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn">personnummer (<i>cpr:civilRegistrationNumber</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> rdfs:Literal </span><br/>
+<ul>
+<li><b> altLabel (da) </b>: CPR-nummer</li>
+
+
+<li><b> comment (da) </b>: § 3. Enhver skal have tildelt et personnummer, hvis vedkommende
+1) folkeregistreres her i landet på grund af fødsel eller tilflytning fra udlandet,
+2) inddrages under ATP,
+3) ifølge skattemyndighederne skal have et sådant i forbindelse med skattesagsbehandling her i landet.</li>
+<li><b> definition (da) </b>: Entydig Identifikation af en person i CPR. Indeholder information om fødselsdato, køn og århunderede. Et personnummer kan ændres, hvis data i nummeret ændres, eller når der konstateres at en person har flere personnumre.</li>
+<li><b> eget </b>: nej</li>
+<li><b> prefLabel (da) </b>: personnummer</li>
+<li><b> prefLabel (en) </b>: civil registration number</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ <div class="klassekasse">
+<h2><span class="klassenavn">Class:cvr:Virksomhed </span></h2>
+<span class="engelskelementnavn"><i>(cvr:Business)</i></br><br/>
+<br/>
+Beskrivelse:
+<ul>
+<li><b> altLabel (da) </b>: selskab</li>
+  
+ 
+   <li><b> definition (da) </b>: En virksomhed er en juridisk enhed jf. CVR-loven</li>
+    <li><b> eget </b>: nej</li>
+       <li><b> legalSource </b>: https://www.retsinformation.dk/eli/lta/2006/653</li>
+ <li><b> prefLabel (da) </b>: virksomhed</li>
+ <li><b> prefLabel (en) </b>: business</li>
+     </ul>
+<div class="egenskaber">
+
+<h3>Egenskaber:</h3>
+<div class="objektegenskaber">
+<h4>Objektegenskaber:</h4>
+ 
+</div>
+<div class="datatypeegenskaber">
+<h4>Datatypeegenskaber:</h4>
+<h5><span class="egenskabnavn">cvr-nummer (<i>cvr:businessRegistrationNumber</i>) </span></h5>
+
+Beskrivelse:<br/>
+<span class="typedesignation"><b>Type:</b> rdfs:Literal </span><br/>
+<ul>
+
+
+<li><b> comment (da) </b>: Entydig identifikation af virksomhed</li>
+<li><b> definition (da) </b>: En virksomheds forretningsnøgle</li>
+<li><b> eget </b>: nej</li>
+<li><b> legalSource </b>: https://www.retsinformation.dk/eli/lta/2006/653</li>
+<li><b> prefLabel (da) </b>: cvr-nummer</li>
+<li><b> prefLabel (en) </b>: business registration number</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+
+ 
+ 
+
+</body>
+
+
