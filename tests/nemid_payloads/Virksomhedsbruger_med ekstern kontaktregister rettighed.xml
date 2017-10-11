@@ -1,0 +1,116 @@
+﻿<Assertion ID="_d50ecd34-3c01-441c-8be2-77a73b5b4c56" IssueInstant="2017-05-31T22:04:50.542Z" Version="2.0"
+           xmlns="urn:oasis:names:tc:SAML:2.0:assertion">
+    <Issuer>https://saml.test-nemlog-in.dk/</Issuer>
+    <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            <ds:Reference URI="#_d50ecd34-3c01-441c-8be2-77a73b5b4c56">
+                <ds:Transforms>
+                    <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                    <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                </ds:Transforms>
+                <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <ds:DigestValue>gZYSN+WL9DCE3Ws/vfQxwucf1Ow=</ds:DigestValue>
+            </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>
+            EGCfZ34McWD41FZnme9yfVTCcjAzJBmQ4DBgcIKDrK8AvmksTnYTdtLJ9WBE6PWo9hBHXUckiBw4+4uXxwhQaB9zQXsRY2kTUAowtUmXWtrZ4QKBky5QTQboGODlsk+1SGjylGQCa/lnV3T/NmhjnvzZRsSP9l+7eq4L24pGN9FjscLwy6B3hlwM8K/w1U4nzSOliWnPaXYmYLb0epT1YjF1tn6IhOr4MHwi/Vhk6QysvYCq+PpMZX5T6sco0ndFcAQ3v4gAvfzOTJoGYkikXZhneiVuj+/TXS/rVlARtxJBSGY05YnmoxbbMUOiohaxmIQ7vpPk9agMNB+g6nVz2g==
+        </ds:SignatureValue>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <ds:X509Data>
+                <ds:X509Certificate>
+                    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
+                </ds:X509Certificate>
+            </ds:X509Data>
+        </KeyInfo>
+    </ds:Signature>
+    <Subject>
+        <NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName">C=DK,O=Søren Sørensens biler //
+            29634750,CN=Søren Sørensen,Serial=CVR:29634750-RID:780988730675
+        </NameID>
+        <SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+            <SubjectConfirmationData InResponseTo="id98636e40b53a41b0a5b0c4943d34628d"
+                                     NotOnOrAfter="2017-05-31T22:09:50.542Z"
+                                     Recipient="https://test-dp-kontaktregister.dk/demo/login.ashx"/>
+        </SubjectConfirmation>
+    </Subject>
+    <Conditions NotBefore="2017-05-31T21:59:50.495Z" NotOnOrAfter="2017-05-31T22:59:50.495Z">
+        <AudienceRestriction>
+            <Audience>https://saml.test-dp-kontaktregister.dk/</Audience>
+        </AudienceRestriction>
+    </Conditions>
+    <AttributeStatement>
+        <Attribute Name="dk:gov:saml:attribute:AssuranceLevel"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>3</AttributeValue>
+        </Attribute>
+        <Attribute Name="urn:oid:2.5.29.29" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>CN=TRUST2408 Systemtest XIX CA, O=TRUST2408, C=DK</AttributeValue>
+        </Attribute>
+        <Attribute Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>Søren Sørensen</AttributeValue>
+        </Attribute>
+        <Attribute Name="dk:gov:saml:attribute:CvrNumberIdentifier"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>29634750</AttributeValue>
+        </Attribute>
+        <Attribute Name="urn:oid:2.5.4.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>Søren Sørensens biler // 29634750</AttributeValue>
+        </Attribute>
+        <Attribute Name="dk:gov:saml:attribute:RidNumberIdentifier"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>780988730675</AttributeValue>
+        </Attribute>
+        <Attribute Name="urn:oid:2.5.4.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>5818A5B7</AttributeValue>
+        </Attribute>
+        <Attribute Name="dk:gov:saml:attribute:SpecVer" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>DK-SAML-2.0</AttributeValue>
+        </Attribute>
+        <Attribute Name="urn:oid:0.9.2342.19200300.100.1.1"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>CVR:29634750-RID:780988730675</AttributeValue>
+        </Attribute>
+        <Attribute Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue/>
+        </Attribute>
+        <Attribute Name="urn:oid:1.3.6.1.4.1.1466.115.121.1.8"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>
+                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
+            </AttributeValue>
+        </Attribute>
+        <Attribute Name="dk:gov:saml:attribute:Privileges_intermediate"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue>
+                PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48YnBwOlByaXZpbGVnZUxpc3QgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6YnBwPSJodHRwOi8vaXRzdC5kay9vaW9zYW1sL2Jhc2ljX3ByaXZpbGVnZV9wcm9maWxlIj48UHJpdmlsZWdlR3JvdXAgU2NvcGU9InVybjpkazpnb3Y6c2FtbDpDdnJOdW1iZXJJZGVudGlmaWVyOjM0Mzg4MTU2Ij48UHJpdmlsZWdlPnVybjpkazpwcml2aWxlZ2llX2tvbnRha3RyZWdpc3RlcjwvUHJpdmlsZWdlPjwvUHJpdmlsZWdlR3JvdXA+PC9icHA6UHJpdmlsZWdlTGlzdD4=            </AttributeValue>
+        </Attribute>
+        <Attribute Name="dk:gov:saml:attribute:ProductionUnitIdentifier"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue/>
+        </Attribute>
+        <Attribute Name="dk:gov:saml:attribute:SENumberIdentifier"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue/>
+        </Attribute>
+        <Attribute Name="dk:gov:saml:attribute:UserAdministratorIndicator"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue/>
+        </Attribute>
+        <Attribute Name="urn:oid:0.9.2342.19200300.100.1.3"
+                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <AttributeValue/>
+        </Attribute>
+        <Attribute Name="urn:liberty:disco:2006-08:DiscoveryEPR">
+            <AttributeValue>
+                PEFzc2VydGlvbiBJRD0iXzEwZjQzYjBjLTc3ZTEtNGNlMC1iYmMwLTg4NmU5YjRkMGJiOCIgSXNzdWVJbnN0YW50PSIyMDE3LTA1LTMxVDIyOjA0OjUwLjUyN1oiIFZlcnNpb249IjIuMCIgeG1sbnM9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxJc3N1ZXI+aHR0cHM6Ly9zYW1sLm5lbWxvZy1pbi5kazwvSXNzdWVyPjxkczpTaWduYXR1cmUgeG1sbnM6ZHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPjxkczpTaWduZWRJbmZvPjxkczpDYW5vbmljYWxpemF0aW9uTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIiAvPjxkczpTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2IiAvPjxkczpSZWZlcmVuY2UgVVJJPSIjXzEwZjQzYjBjLTc3ZTEtNGNlMC1iYmMwLTg4NmU5YjRkMGJiOCI+PGRzOlRyYW5zZm9ybXM+PGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIiAvPjxkczpUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiIC8+PC9kczpUcmFuc2Zvcm1zPjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiIC8+PGRzOkRpZ2VzdFZhbHVlPnh1Q0EveEFCQVd5NG5EMDhhY1p2blB4UHNFdGlHZkIzRmlwdzhlUHlOWDg9PC9kczpEaWdlc3RWYWx1ZT48L2RzOlJlZmVyZW5jZT48L2RzOlNpZ25lZEluZm8+PGRzOlNpZ25hdHVyZVZhbHVlPmsrUVJLSHVxTkhqTjBVRnYvK2w0SnMrYThORjBCbHhNbWl1c0syTzBMcFcydng2Uk5lVS9kZ0NRVVZESUIwMTkrUzQrZkNHSmwzT09BUlZLTW5NSG01UzY3ZEFNajRTQlhWT25sRXFZaUVPUlk1bW5SVVE1ZFB0bnVWeEdZT1cyNHNIZzN4RmNWUzV4Mnh3ZzVjTVR6TStUd3NMYnBEQW5NdWNnY3JIVjFsMjNCMER2Y2F6NXRNQlk1aWtrNzdqQm5kTHVBd3RsbmlUYTJVbDMyS3EwcWN2VXFaTk0wbnhzeFp6SDdzeDlKSzRnOFRHV2VEcXBMbWgrZGFyd2FpUUJZaWc0S2dWejBFTVRhWFIwNGU5NjNWeWxZcmI0QU5FY3d3bDBNNCs3MWRFTjlNeTJ6MFRueFdLNVBWUlVmUWNINzdUU3J3dlAxbmFZVStuZ2dRYXMvZz09PC9kczpTaWduYXR1cmVWYWx1ZT48S2V5SW5mbyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+PFg1MDlEYXRhPjxYNTA5Q2VydGlmaWNhdGU+TUlJR0tUQ0NCUkdnQXdJQkFnSUVXQmtEOFRBTkJna3Foa2lHOXcwQkFRc0ZBREJITVFzd0NRWURWUVFHRXdKRVN6RVNNQkFHQTFVRUNnd0pWRkpWVTFReU5EQTRNU1F3SWdZRFZRUUREQnRVVWxWVFZESTBNRGdnVTNsemRHVnRkR1Z6ZENCWVNWZ2dRMEV3SGhjTk1UY3dOREl3TURneE9EVTJXaGNOTWpBd05ESXdNRGd4T0RJMldqQ0JsakVMTUFrR0ExVUVCaE1DUkVzeE1UQXZCZ05WQkFvTUtFUnBaMmwwWVd4cGMyVnlhVzVuYzNOMGVYSmxiSE5sYmlBdkx5QkRWbEk2TXpRd05URXhOemd4VkRBZ0JnTlZCQVVUR1VOV1Vqb3pOREExTVRFM09DMUdTVVE2TlRZNU5EQTBNVE13TUFZRFZRUUREQ2xPWlcxTWIyY3RhVzRnUVVSR1V5QlVaWE4wSUNobWRXNXJkR2x2Ym5OalpYSjBhV1pwYTJGMEtUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUp1Nm5GK0oxKzVMZm5PY0YxSWV0QU02UkQ5V0ErNVNQYmZtTVpGY3R5ZzR5aWZaTDJwcGtXN1hVQjVBVWRac0ZIcHFGYlprVEtiQ2VaRkpJcGlyYWVCRFFadEh0N21kSHRMOC9VRjI2MkZDR1pkSXFQNzdLY3QzMjNyaFljUXFkOUhmVTVpSEpaSjFEK0gyek5kaHF4bkVHc1RIaXZ2ZzVRMnF0VFVOaCtuWnFvQWVCeFBLRWczcEhraHJzNFFYcVBQSyt5QkVjTzhza2hxZHBNdUhCV3pvMGNpVUt6L1M4b3FPN3k4d3lTcVIycDZ0WkNWSU1KZzZncXdOZVV6YnhPUFJ5MU1EazJLWE5YZEk2eEdYdFlRL25VTm54U1VsOTkvRHgwTnhFWHhNeW5aNmRKSUwwUnRxVGZhd3RtR2VSMjVMQzNpRTBXb0xhZU5CZ1RubXlqOENBd0VBQWFPQ0Fzc3dnZ0xITUE0R0ExVWREd0VCL3dRRUF3SUR1RENCbHdZSUt3WUJCUVVIQVFFRWdZb3dnWWN3UEFZSUt3WUJCUVVITUFHR01HaDBkSEE2THk5dlkzTndMbk41YzNSbGJYUmxjM1F4T1M1MGNuVnpkREkwTURndVkyOXRMM0psYzNCdmJtUmxjakJIQmdnckJnRUZCUWN3QW9ZN2FIUjBjRG92TDJZdVlXbGhMbk41YzNSbGJYUmxjM1F4T1M1MGNuVnpkREkwTURndVkyOXRMM041YzNSbGJYUmxjM1F4T1MxallTNWpaWEl3Z2dFZ0JnTlZIU0FFZ2dFWE1JSUJFekNDQVE4R0RTc0dBUVFCZ2ZSUkFnUUdCQUl3Z2Ywd0x3WUlLd1lCQlFVSEFnRVdJMmgwZEhBNkx5OTNkM2N1ZEhKMWMzUXlOREE0TG1OdmJTOXlaWEJ2YzJsMGIzSjVNSUhKQmdnckJnRUZCUWNDQWpDQnZEQU1GZ1ZFWVc1SlJEQURBZ0VCR29HclJHRnVTVVFnZEdWemRDQmpaWEowYVdacGEyRjBaWElnWm5KaElHUmxibTVsSUVOQklIVmtjM1JsWkdWeklIVnVaR1Z5SUU5SlJDQXhMak11Tmk0eExqUXVNUzR6TVRNeE15NHlMalF1Tmk0MExqSXVJRVJoYmtsRUlIUmxjM1FnWTJWeWRHbG1hV05oZEdWeklHWnliMjBnZEdocGN5QkRRU0JoY21VZ2FYTnpkV1ZrSUhWdVpHVnlJRTlKUkNBeExqTXVOaTR4TGpRdU1TNHpNVE14TXk0eUxqUXVOaTQwTGpJdU1JR3JCZ05WSFI4RWdhTXdnYUF3UEtBNm9EaUdObWgwZEhBNkx5OWpjbXd1YzNsemRHVnRkR1Z6ZERFNUxuUnlkWE4wTWpRd09DNWpiMjB2YzNsemRHVnRkR1Z6ZERFNUxtTnliREJnb0Y2Z1hLUmFNRmd4Q3pBSkJnTlZCQVlUQWtSTE1SSXdFQVlEVlFRS0RBbFVVbFZUVkRJME1EZ3hKREFpQmdOVkJBTU1HMVJTVlZOVU1qUXdPQ0JUZVhOMFpXMTBaWE4wSUZoSldDQkRRVEVQTUEwR0ExVUVBd3dHUTFKTU1UQTJNQjhHQTFVZEl3UVlNQmFBRk13Q1ZRemtnWFN2SUZUVkVSUlhuSkZTT0grZ01CMEdBMVVkRGdRV0JCUm40MElBZ1V5R05CTEllOVdWcGc0ZHAydzZyekFKQmdOVkhSTUVBakFBTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFBTkxCTzhoRitaeXhrSFpyeWhwNmhMSVBpOXRIMlRXWk5ZdnYvWTlOVy90V1dtVllrZ05OQWVjd3BZc201RXpNQW1sSmlZRjBLeFpaMGpNSWN5VU0xcTZhRzhUT255bThuREt3N2tYTmVnTGpIN1pPL3VoUGFiUnRDYUpteXJZVW53UmpnSFZtQjJoOHJzZnFWM0FDZENBUk9HOE9TU2dGZE1zOWhUSExRTE9CeG5iaFhEK09odjh0YUFyS25YdmdTRWI0amJZYTc4U0orV0QvOE92M0NJbG0vaUFCYlR3UE91MW9xYSsyYzNtVVJ6Z0VaWmxVQWI4c29yKzBJZzFRVzN6aWNEY0lWVlZrK0VtVjlTVU14T1I0Mzd3VEoyS1l2VTZYemlUdXBDZ01XTG1yWTUybElKK3VTNFhNTm14b2M2MGFqVXlVWlhGWUVoVlFrSDg1UXY8L1g1MDlDZXJ0aWZpY2F0ZT48L1g1MDlEYXRhPjwvS2V5SW5mbz48L2RzOlNpZ25hdHVyZT48U3ViamVjdD48TmFtZUlEIEZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6MS4xOm5hbWVpZC1mb3JtYXQ6WDUwOVN1YmplY3ROYW1lIj5DPURLLE89U8O4cmVuIFPDuHJlbnNlbnMgYmlsZXIgLy8gMjk2MzQ3NTAsQ049U8O4cmVuIFPDuHJlbnNlbixTZXJpYWw9Q1ZSOjI5NjM0NzUwLVJJRDo5MjA4LTIwMDItMi03ODA5ODg3MzA2NzU8L05hbWVJRD48U3ViamVjdENvbmZpcm1hdGlvbiBNZXRob2Q9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpjbTpob2xkZXItb2Yta2V5Ij48U3ViamVjdENvbmZpcm1hdGlvbkRhdGEgYTp0eXBlPSJLZXlJbmZvQ29uZmlybWF0aW9uRGF0YVR5cGUiIHhtbG5zOmE9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIj48S2V5SW5mbyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+PFg1MDlEYXRhPjxYNTA5Q2VydGlmaWNhdGU+TUlJR0hUQ0NCUVdnQXdJQkFnSUVVeEFYcURBTkJna3Foa2lHOXcwQkFRc0ZBREJITVFzd0NRWURWUVFHRXdKRVN6RVNNQkFHQTFVRUNnd0pWRkpWVTFReU5EQTRNU1F3SWdZRFZRUUREQnRVVWxWVFZESTBNRGdnVTNsemRHVnRkR1Z6ZENCWVNWZ2dRMEV3SGhjTk1UVXdPREk0TVRBMU5URTJXaGNOTVRnd09ESTRNVEExTkRJeldqQ0JpekVMTUFrR0ExVUVCaE1DUkVzeE1UQXZCZ05WQkFvTUtFUnBaMmwwWVd4cGMyVnlhVzVuYzNOMGVYSmxiSE5sYmlBdkx5QkRWbEk2TXpRd05URXhOemd4U1RBZ0JnTlZCQVVUR1VOV1Vqb3pOREExTVRFM09DMUdTVVE2TXpNMk9UQTNNREF3SlFZRFZRUUREQjVUVURFZ1ZFVlRWQ0FvWm5WdWEzUnBiMjV6WTJWeWRHbG1hV3RoZENrd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUUNacUZaOVpjR0w0a1RwWC9jb1hibEgrMG0veElRT3NLNmxWaUVYVDNuQ1Zra2ZoWjRCQmRPaWpZOU9oUlhMN3F4MXVqVUFNWEhtTVY1clpSVFhNeW1HT0hMTGNBV1U0aUhaOUEyUmVPMU0vQXFoUmtHYmhYVFlFcm1nWkc4S2pEWTE1aVVlOGkzWDhtMzVOcG1nNnd1dUY1Mmt0K0lId2ZET0JjMlFYc0lVTThJV3JJVTQyeVRsY0hMSEFxdGZ3M2M1ME9sSWdPVXVZY0M2QXd1Vzh3aHVuVVl6VGNZQjhVL1hPMEhFTk5RMFZia1JQV1JKQVNYVDRFd2drQXk1emEySG5UUlhLNWJVNFlOc0tGc1hoRjRJUWpoSVJYeHhkQnoza1E4Q1ZYRUtrSldsbitkT2tFWk9BSlBDYUFwcGg1L0Q3Y2Y5UHMxeHB5K25oNlhlczVXUkFnTUJBQUdqZ2dMS01JSUN4akFPQmdOVkhROEJBZjhFQkFNQ0E3Z3dnWmNHQ0NzR0FRVUZCd0VCQklHS01JR0hNRHdHQ0NzR0FRVUZCekFCaGpCb2RIUndPaTh2YjJOemNDNXplWE4wWlcxMFpYTjBNVGt1ZEhKMWMzUXlOREE0TG1OdmJTOXlaWE53YjI1a1pYSXdSd1lJS3dZQkJRVUhNQUtHTzJoMGRIQTZMeTltTG1GcFlTNXplWE4wWlcxMFpYTjBNVGt1ZEhKMWMzUXlOREE0TG1OdmJTOXplWE4wWlcxMFpYTjBNVGt0WTJFdVkyVnlNSUlCSUFZRFZSMGdCSUlCRnpDQ0FSTXdnZ0VQQmcwckJnRUVBWUgwVVFJRUJnUUNNSUg5TUM4R0NDc0dBUVVGQndJQkZpTm9kSFJ3T2k4dmQzZDNMblJ5ZFhOME1qUXdPQzVqYjIwdmNtVndiM05wZEc5eWVUQ0J5UVlJS3dZQkJRVUhBZ0l3Z2J3d0RCWUZSR0Z1U1VRd0F3SUJBUnFCcTBSaGJrbEVJSFJsYzNRZ1kyVnlkR2xtYVd0aGRHVnlJR1p5WVNCa1pXNXVaU0JEUVNCMVpITjBaV1JsY3lCMWJtUmxjaUJQU1VRZ01TNHpMall1TVM0MExqRXVNekV6TVRNdU1pNDBMall1TkM0eUxpQkVZVzVKUkNCMFpYTjBJR05sY25ScFptbGpZWFJsY3lCbWNtOXRJSFJvYVhNZ1EwRWdZWEpsSUdsemMzVmxaQ0IxYm1SbGNpQlBTVVFnTVM0ekxqWXVNUzQwTGpFdU16RXpNVE11TWk0MExqWXVOQzR5TGpDQnFnWURWUjBmQklHaU1JR2ZNRHlnT3FBNGhqWm9kSFJ3T2k4dlkzSnNMbk41YzNSbGJYUmxjM1F4T1M1MGNuVnpkREkwTURndVkyOXRMM041YzNSbGJYUmxjM1F4T1M1amNtd3dYNkJkb0Z1a1dUQlhNUXN3Q1FZRFZRUUdFd0pFU3pFU01CQUdBMVVFQ2d3SlZGSlZVMVF5TkRBNE1TUXdJZ1lEVlFRRERCdFVVbFZUVkRJME1EZ2dVM2x6ZEdWdGRHVnpkQ0JZU1ZnZ1EwRXhEakFNQmdOVkJBTU1CVU5TVERNNE1COEdBMVVkSXdRWU1CYUFGTXdDVlF6a2dYU3ZJRlRWRVJSWG5KRlNPSCtnTUIwR0ExVWREZ1FXQkJRSE5DYmNTWGppbHNLMisrUVI0aG5VaWVFemR6QUpCZ05WSFJNRUFqQUFNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUF0RG4yd0tZN2M0Zk5DR0R6TlBZZ1Z1UlRmc3ZicVlHSUZvRW56YXloQnpBdFlPbE9ONWJMNEthcEI5L2xBbHM5YktrRlNtMVJGamErMHlaVTJleDNpenVaRDI2amlpSWZZOFljbFBmRC9uTFZBVVIwc0k5bm5oNVlUMW5Tdk4rMVVPTy9UN0VaS0ZKWmRmbWV3d3pRRklmZDB6T0FuUnNNTGN1MG1vMzNjNVFPVzhvK3FVNjVqVVF3VVMzZkh4ZnV5YzREWWJTa2tmcXIxbnRIcWsyRGNMV3JxQXY5TTYrN2lzaDRGb1o0ZGJ1YnNLOS9rejhDU1VxenpEQVFKbTE4eXlDVFpFZ2N6NzZiTnRwdXp1ZEs5cEdxdFpYKzRrbDYyT2loMEkyNTFkQWpnbzcyd244ZjljYjYzVWJUNHpSVEppK2V6QlNDQUF1RkxDL0Y3ZG5rdTwvWDUwOUNlcnRpZmljYXRlPjwvWDUwOURhdGE+PC9LZXlJbmZvPjwvU3ViamVjdENvbmZpcm1hdGlvbkRhdGE+PC9TdWJqZWN0Q29uZmlybWF0aW9uPjwvU3ViamVjdD48Q29uZGl0aW9ucyBOb3RPbk9yQWZ0ZXI9IjIwMTctMDYtMDFUMDA6MDQ6NTAuNTI3WiI+PEF1ZGllbmNlUmVzdHJpY3Rpb24+PEF1ZGllbmNlPmh0dHBzOi8vYm9vdHN0cmFwLnN0cy5uZW1sb2ctaW4uZGsvPC9BdWRpZW5jZT48L0F1ZGllbmNlUmVzdHJpY3Rpb24+PC9Db25kaXRpb25zPjxBdHRyaWJ1dGVTdGF0ZW1lbnQ+PEF0dHJpYnV0ZSBOYW1lPSJkazpuZW1sb2dpbjpzYW1sOmF0dHJpYnV0ZTpJZFBTZXNzaW9uSW5kZXgiIE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxBdHRyaWJ1dGVWYWx1ZT41RC0zQS1GMS03NS1ERC00Ni1DMi02MC0zNC1BRi1EMS0wMi04OS1FMS04NC03NS1GNS01Ri1BMC04MDwvQXR0cmlidXRlVmFsdWU+PC9BdHRyaWJ1dGU+PEF0dHJpYnV0ZSBOYW1lPSJkazpuZW1sb2dpbjpzYW1sOmF0dHJpYnV0ZTpTcEVudGl0eUlkIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48QXR0cmlidXRlVmFsdWU+aHR0cHM6Ly9zYW1sLnNwMS50ZXN0LW5lbWxvZy1pbi5kay88L0F0dHJpYnV0ZVZhbHVlPjwvQXR0cmlidXRlPjwvQXR0cmlidXRlU3RhdGVtZW50PjwvQXNzZXJ0aW9uPg==
+            </AttributeValue>
+        </Attribute>
+    </AttributeStatement>
+    <AuthnStatement AuthnInstant="2017-05-31T22:04:50.012Z" SessionIndex="_d50ecd34-3c01-441c-8be2-77a73b5b4c56">
+        <AuthnContext>
+            <AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:X509</AuthnContextClassRef>
+        </AuthnContext>
+    </AuthnStatement>
+</Assertion>

@@ -1,0 +1,30 @@
+machine:
+  timezone:
+    Europe/Copenhagen
+
+  hosts:
+    dev.api: 127.0.0.1
+
+  php:
+    version: 7.1.0
+
+  node:
+    version: 6.5.0
+
+  environment:
+    APP_ENV: testing
+    QUEUE_DRIVER: sync
+    APP_KEY: base64:7kHixEaPecb0+3BmlHjLKd0pYJ/AOZkWPjk+dINYzIM=
+
+dependencies:
+  cache_directories:
+    - vendor
+    - ~/.composer/cache
+  pre:
+    - composer global require "hirak/prestissimo:^0.3"
+  override:
+    - composer install --no-interaction
+
+test:
+  override:
+    - php vendor/bin/phpunit --coverage-html ${CIRCLE_TEST_REPORTS}/coverage/

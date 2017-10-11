@@ -1,0 +1,995 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Digital Registry Api",
+        "description": "",
+        "termsOfService": "",
+        "contact": {
+            "email": "contact@mysite.com"
+        },
+        "version": "1.0.0"
+    },
+    "host": "api.digital-registry.dk",
+    "basePath": "/",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/contact/{identifier}": {
+            "get": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Get contact by identifier, either CPR or CVR",
+                "description": "Return contact.",
+                "operationId": "contact",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Invalid tag value"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact": {
+            "post": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Create contact.",
+                "description": "Create a contact.",
+                "operationId": "contact-create",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/search": {
+            "get": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Get contact by identifier, either CPR or CVR",
+                "description": "Return list of contacts.",
+                "operationId": "search",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter for subscription types.",
+                        "required": false,
+                        "type": "string",
+                        "enum": [
+                            "sms",
+                            "notification"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/register": {
+            "post": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Create contact resource.",
+                "description": "Register a contact including media and subscription values.",
+                "operationId": "contact-register",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/{identifier}/logs": {
+            "get": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Get contact logs.",
+                "description": "Get contact logs.",
+                "operationId": "contact-logs",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/contact"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/{identifier}/medias": {
+            "get": {
+                "tags": [
+                    "contact:media"
+                ],
+                "summary": "Get contact medias",
+                "description": "Get contact medias.",
+                "operationId": "contact-medias",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "contact:media"
+                ],
+                "summary": "Create a contact media",
+                "description": "Create contact media.",
+                "operationId": "contact-medias-create",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/{identifier}/medias/{media_id}": {
+            "delete": {
+                "tags": [
+                    "contact:media"
+                ],
+                "summary": "Delete a contact media",
+                "description": "Delete contact media.",
+                "operationId": "contact-medias-delete",
+                "responses": {
+                    "204": {
+                        "description": ""
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/{identifier}/medias/{media_id}/": {
+            "put": {
+                "tags": [
+                    "contact:media"
+                ],
+                "summary": "Update a contact media",
+                "description": "Update contact media.",
+                "operationId": "contact-medias-update",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Media"
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/{identifier}/media-subscriptions": {
+            "post": {
+                "tags": [
+                    "contact:media-subscription"
+                ],
+                "summary": "Create a contact media subscriptions",
+                "description": "Create contact media.",
+                "operationId": "contact-medias-create",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/{identifier}/media-subscriptions/{media_subscription_id}": {
+            "delete": {
+                "tags": [
+                    "contact:media-subscription"
+                ],
+                "summary": "Delete a contact media subscriptions",
+                "description": "Delete contact media.",
+                "operationId": "contact-medias-delete",
+                "responses": {
+                    "204": {
+                        "description": ""
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/{identifier}/subscriptions": {
+            "get": {
+                "tags": [
+                    "contact:subscription"
+                ],
+                "summary": "Get contact subscriptions",
+                "description": "Get contact subscriptions.",
+                "operationId": "contact-subscription",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Subscription"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "contact:subscription"
+                ],
+                "summary": "Create a contact subscription",
+                "description": "Create contact subscription.",
+                "operationId": "contact-subscription-create",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Subscription"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/{identifier}/subscriptions/{subscription_id}": {
+            "get": {
+                "tags": [
+                    "contact:subscription"
+                ],
+                "summary": "Get contact subscriptions",
+                "description": "Get contact subscriptions.",
+                "operationId": "contact-subscription-get",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Subscription"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "contact:subscription"
+                ],
+                "summary": "Update a contact subscription",
+                "description": "Create contact subscription.",
+                "operationId": "contact-subscription-update",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Subscription"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "contact:subscription"
+                ],
+                "summary": "Delete a contact subscription",
+                "description": "Delete contact subscription.",
+                "operationId": "contact-medias-delete",
+                "responses": {
+                    "204": {
+                        "description": ""
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/contact/{identifier}/subscriptions/{subscription_id}/accept-terms": {
+            "put": {
+                "tags": [
+                    "contact:subscription"
+                ],
+                "summary": "Accept subscription terms.",
+                "description": "Accept subscription terms.",
+                "operationId": "contact-subscription-accept-terms",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Subscription"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "write:contact",
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/subscription-types": {
+            "get": {
+                "tags": [
+                    "subscription-types"
+                ],
+                "summary": "List subscription types.",
+                "description": "List subscription types.",
+                "operationId": "subscription-types",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/SubscriptionType"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/terms": {
+            "get": {
+                "tags": [
+                    "term"
+                ],
+                "summary": "Get terms",
+                "description": "Get terms.",
+                "operationId": "terms",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Term"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/terms/{term_id}": {
+            "get": {
+                "tags": [
+                    "term"
+                ],
+                "summary": "Get term",
+                "description": "Get term.",
+                "operationId": "term",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Term"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "nemId": [
+                            "read:contact"
+                        ],
+                        "basic-auth": [
+                            "read:contact"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "contact-create": {
+            "properties": {
+                "type": {
+                    "description": "Contact type, company or person.",
+                    "type": "string"
+                },
+                "identifier": {
+                    "description": "Contact unique identifier, their cvr or cpr number.",
+                    "type": "string"
+                }
+            }
+        },
+        "contact": {
+            "properties": {
+                "contact": {
+                    "description": "Contact model.",
+                    "$ref": "#/definitions/Contact"
+                }
+            }
+        },
+        "contact-logs": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "start": {
+                    "description": "Filter search logs by a start date."
+                },
+                "end": {
+                    "description": "Filter search logs by an end date."
+                },
+                "type": {
+                    "description": "Filter search by type."
+                }
+            }
+        },
+        "contact-register": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "media": {
+                    "$ref": "#definitions/Media"
+                },
+                "subscription": {
+                    "$ref": "#definitions/Subscription"
+                }
+            }
+        },
+        "search": {
+            "properties": {
+                "query": {
+                    "description": "Query, this can be cpr/cvr numbers.",
+                    "type": "string"
+                },
+                "filters": {
+                    "description": "Filter to be applied in search.",
+                    "type": "array"
+                }
+            }
+        },
+        "media-create": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "type": {
+                    "description": "Media type.",
+                    "type": "string"
+                },
+                "data": {
+                    "description": "Contact media data.",
+                    "type": "array"
+                }
+            }
+        },
+        "media-destroy": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "media": {
+                    "description": "Media resource.",
+                    "$ref": "#/definitions/Media"
+                }
+            }
+        },
+        "media": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                }
+            }
+        },
+        "media-update": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "media": {
+                    "$ref": "#definitions/Media"
+                },
+                "type": {
+                    "description": "Media type.",
+                    "type": "string"
+                },
+                "data": {
+                    "description": "Information data.",
+                    "type": "array"
+                }
+            }
+        },
+        "media-subscription-create": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "subscription_id": {
+                    "description": "Subscription id.",
+                    "type": "integer"
+                },
+                "media_id": {
+                    "description": "Media id.",
+                    "type": "integer"
+                }
+            }
+        },
+        "media-subscription-destroy": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "subscription_id": {
+                    "description": "Subscription id.",
+                    "type": "integer"
+                },
+                "media_id": {
+                    "description": "Media id.",
+                    "type": "integer"
+                }
+            }
+        },
+        "subscription-type": {},
+        "subscription-accept-terms": {
+            "properties": {
+                "subscription": {
+                    "description": "$subscription",
+                    "$ref": "#definitions/Subscription"
+                },
+                "term_id": {
+                    "description": "Term id.",
+                    "type": "integer"
+                }
+            }
+        },
+        "subscription-create": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "subscription_type_id": {
+                    "description": "Subscription type.",
+                    "type": "integer"
+                },
+                "source_contact_id": {
+                    "description": "Source contact id.",
+                    "type": "integer"
+                },
+                "start_at": {
+                    "description": "When the subscription should start."
+                },
+                "end_at": {
+                    "description": "When the subscription should end."
+                }
+            }
+        },
+        "subscription-destroy": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "subscription": {
+                    "$ref": "#definitions/Subscription"
+                }
+            }
+        },
+        "subscription-get": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                },
+                "subscription": {
+                    "description": "Subscription resource.",
+                    "$ref": "#/definitions/Subscription"
+                }
+            }
+        },
+        "subscription": {
+            "properties": {
+                "contact": {
+                    "$ref": "#definitions/Contact"
+                }
+            }
+        },
+        "subscription-update": {
+            "properties": {
+                "subscription": {
+                    "$ref": "#definitions/Subscription"
+                },
+                "end_at": {
+                    "description": "When the subscription should end."
+                }
+            }
+        },
+        "terms-get": {
+            "properties": {
+                "term": {
+                    "description": "Term.",
+                    "$ref": "#/definitions/Term"
+                }
+            }
+        },
+        "AcceptedTerm": {},
+        "Contact": {},
+        "Log": {},
+        "Media": {},
+        "MediaSubscription": {},
+        "Subscription": {},
+        "SubscriptionType": {},
+        "Term": {}
+    }
+}

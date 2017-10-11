@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.6" jmeter="2.11.20151206">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="HTTP Request" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">100</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">2</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <longProp name="ThreadGroup.start_time">1499320467000</longProp>
+        <longProp name="ThreadGroup.end_time">1499320467000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SearchMultiple" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="query" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1111111111,0607916491,2703053438,0803733880,1009019609,1902998762,2410942112,0505915254,1312924417,2402079522,0604092344,2208932532,0407072920,0803045554,3012776181,1101778298,0608876542,0509803970,0406885483,2106888686,1408801741,2704737945,0710142248,1904955327,2404717435,2408975849,1312714112,1710716648,3010725880,0709931080,2606838926,1805046408</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">query</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost/api/search</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SearchSingle" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="query" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1111111111</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">query</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost/api/search</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GetContact" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost/api/contacts/1111111111</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GetContactSubscription" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost/api/contacts/1111111111/subscriptions</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">localhost</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Authorization</stringProp>
+            <stringProp name="Header.value">NemID &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot; ?&gt; &lt;Assertion ID=&quot;_db2695fb-2914-4cd7-8658-2266428c3874&quot; IssueInstant=&quot;2017-05-31T20:05:02.974Z&quot; Version=&quot;2.0&quot; xmlns=&quot;urn:oasis:names:tc:SAML:2.0:assertion&quot;&gt; &lt;Issuer&gt;https://saml.test-nemlog-in.dk/&lt;/Issuer&gt; &lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt; &lt;ds:SignedInfo&gt; &lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;/&gt; &lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/&gt; &lt;ds:Reference URI=&quot;#_db2695fb-2914-4cd7-8658-2266428c3874&quot;&gt; &lt;ds:Transforms&gt; &lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/&gt; &lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;/&gt; &lt;/ds:Transforms&gt; &lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt; &lt;ds:DigestValue&gt;PTxAUA+ZQIed+qkIiUYz2XDmze0=&lt;/ds:DigestValue&gt; &lt;/ds:Reference&gt; &lt;/ds:SignedInfo&gt; &lt;ds:SignatureValue&gt; FUnoYYwvQ5rYBxiACVE6Qot7QC10NNqfD8NQtmrwbL4nSNUOda9snJdtGsq4xIdXhG1WP/DC9S2NQvA0x/s/MqkE6IAHpVx11irMRegTbd8yNKAIEzy96KFySy0DkgebUhbm03+oMRdc7x27KSQYAimXgpLrkfO6O3FQgTRubykB8l7o9BLP0uhuuSfJAoKHnIjIiyB22A2ZZt38l6UMsxWNR3Dl1NAy19dhXvhMSHpNQcSdTLudF00424v+jVnuzOkEOgkslcOvA8t7YM4nm3m2JL4Yv2ZQY/Zmkuogns8I8acVqJ/7IDlhszpBUkO8PHk6QPxuJ4o5bzhY23sceA== &lt;/ds:SignatureValue&gt; &lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt; &lt;ds:X509Data&gt; &lt;ds:X509Certificate&gt; MIIGKTCCBRGgAwIBAgIEWBkD8TANBgkqhkiG9w0BAQsFADBHMQswCQYDVQQGEwJESzESMBAGA1UECgwJVFJVU1QyNDA4MSQwIgYDVQQDDBtUUlVTVDI0MDggU3lzdGVtdGVzdCBYSVggQ0EwHhcNMTcwNDIwMDgxODU2WhcNMjAwNDIwMDgxODI2WjCBljELMAkGA1UEBhMCREsxMTAvBgNVBAoMKERpZ2l0YWxpc2VyaW5nc3N0eXJlbHNlbiAvLyBDVlI6MzQwNTExNzgxVDAgBgNVBAUTGUNWUjozNDA1MTE3OC1GSUQ6NTY5NDA0MTMwMAYDVQQDDClOZW1Mb2ctaW4gQURGUyBUZXN0IChmdW5rdGlvbnNjZXJ0aWZpa2F0KTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJu6nF+J1+5LfnOcF1IetAM6RD9WA+5SPbfmMZFctyg4yifZL2ppkW7XUB5AUdZsFHpqFbZkTKbCeZFJIpiraeBDQZtHt7mdHtL8/UF262FCGZdIqP77Kct323rhYcQqd9HfU5iHJZJ1D+H2zNdhqxnEGsTHivvg5Q2qtTUNh+nZqoAeBxPKEg3pHkhrs4QXqPPK+yBEcO8skhqdpMuHBWzo0ciUKz/S8oqO7y8wySqR2p6tZCVIMJg6gqwNeUzbxOPRy1MDk2KXNXdI6xGXtYQ/nUNnxSUl99/Dx0NxEXxMynZ6dJIL0RtqTfawtmGeR25LC3iE0WoLaeNBgTnmyj8CAwEAAaOCAsswggLHMA4GA1UdDwEB/wQEAwIDuDCBlwYIKwYBBQUHAQEEgYowgYcwPAYIKwYBBQUHMAGGMGh0dHA6Ly9vY3NwLnN5c3RlbXRlc3QxOS50cnVzdDI0MDguY29tL3Jlc3BvbmRlcjBHBggrBgEFBQcwAoY7aHR0cDovL2YuYWlhLnN5c3RlbXRlc3QxOS50cnVzdDI0MDguY29tL3N5c3RlbXRlc3QxOS1jYS5jZXIwggEgBgNVHSAEggEXMIIBEzCCAQ8GDSsGAQQBgfRRAgQGBAIwgf0wLwYIKwYBBQUHAgEWI2h0dHA6Ly93d3cudHJ1c3QyNDA4LmNvbS9yZXBvc2l0b3J5MIHJBggrBgEFBQcCAjCBvDAMFgVEYW5JRDADAgEBGoGrRGFuSUQgdGVzdCBjZXJ0aWZpa2F0ZXIgZnJhIGRlbm5lIENBIHVkc3RlZGVzIHVuZGVyIE9JRCAxLjMuNi4xLjQuMS4zMTMxMy4yLjQuNi40LjIuIERhbklEIHRlc3QgY2VydGlmaWNhdGVzIGZyb20gdGhpcyBDQSBhcmUgaXNzdWVkIHVuZGVyIE9JRCAxLjMuNi4xLjQuMS4zMTMxMy4yLjQuNi40LjIuMIGrBgNVHR8EgaMwgaAwPKA6oDiGNmh0dHA6Ly9jcmwuc3lzdGVtdGVzdDE5LnRydXN0MjQwOC5jb20vc3lzdGVtdGVzdDE5LmNybDBgoF6gXKRaMFgxCzAJBgNVBAYTAkRLMRIwEAYDVQQKDAlUUlVTVDI0MDgxJDAiBgNVBAMMG1RSVVNUMjQwOCBTeXN0ZW10ZXN0IFhJWCBDQTEPMA0GA1UEAwwGQ1JMMTA2MB8GA1UdIwQYMBaAFMwCVQzkgXSvIFTVERRXnJFSOH+gMB0GA1UdDgQWBBRn40IAgUyGNBLIe9WVpg4dp2w6rzAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBCwUAA4IBAQANLBO8hF+ZyxkHZryhp6hLIPi9tH2TWZNYvv/Y9NW/tWWmVYkgNNAecwpYsm5EzMAmlJiYF0KxZZ0jMIcyUM1q6aG8TOnym8nDKw7kXNegLjH7ZO/uhPabRtCaJmyrYUnwRjgHVmB2h8rsfqV3ACdCAROG8OSSgFdMs9hTHLQLOBxnbhXD+Ohv8taArKnXvgSEb4jbYa78SJ+WD/8Ov3CIlm/iABbTwPOu1oqa+2c3mURzgEZZlUAb8sor+0Ig1QW3zicDcIVVVk+EmV9SUMxOR437wTJ2KYvU6XziTupCgMWLmrY52lIJ+uS4XMNmxoc60ajUyUZXFYEhVQkH85Qv &lt;/ds:X509Certificate&gt; &lt;/ds:X509Data&gt; &lt;/KeyInfo&gt; &lt;/ds:Signature&gt; &lt;Subject&gt; &lt;NameID Format=&quot;urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName&quot;&gt;C=DK,O=Digitaliseringsstyrelsen //CVR:34051178,CN=Thomas %C5lb%E6k,Serial=CVR:34051178-RID:90897702 &lt;/NameID&gt; &lt;SubjectConfirmation Method=&quot;urn:oasis:names:tc:SAML:2.0:cm:bearer&quot;&gt; &lt;SubjectConfirmationData InResponseTo=&quot;id5d747023e7f248b8bceab3275de26620&quot; NotOnOrAfter=&quot;2017-05-31T20:10:02.974Z&quot; Recipient=&quot;https://test-dp-kontaktregister.dk/demo/login.ashx&quot;/&gt; &lt;/SubjectConfirmation&gt; &lt;/Subject&gt; &lt;Conditions NotBefore=&quot;2017-05-31T20:00:02.927Z&quot; NotOnOrAfter=&quot;2017-05-31T21:00:02.927Z&quot;&gt; &lt;AudienceRestriction&gt; &lt;Audience&gt;https://saml.test-dp-kontaktregister.dk/&lt;/Audience&gt; &lt;/AudienceRestriction&gt; &lt;/Conditions&gt; &lt;AttributeStatement&gt; &lt;Attribute Name=&quot;dk:gov:saml:attribute:AssuranceLevel&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;3&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;urn:oid:2.5.29.29&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;CN=TRUST2408 Systemtest XIX CA, O=TRUST2408, C=DK&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;urn:oid:2.5.4.3&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;Thomas %C5lb%E6k&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;dk:gov:saml:attribute:CvrNumberIdentifier&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;34051178&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;urn:oid:2.5.4.10&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;Digitaliseringsstyrelsen // CVR:34051178&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;dk:gov:saml:attribute:RidNumberIdentifier&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;90897702&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;urn:oid:2.5.4.5&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;530FB92C&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;dk:gov:saml:attribute:SpecVer&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;DK-SAML-2.0&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;urn:oid:0.9.2342.19200300.100.1.1&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;CVR:34051178-RID:90897702&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;urn:oid:2.5.4.4&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue/&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;urn:oid:1.3.6.1.4.1.1466.115.121.1.8&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt; 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 &lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;dk:gov:saml:attribute:Privileges_intermediate&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt; PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48YnBwOlByaXZpbGVnZUxpc3QgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6YnBwPSJodHRwOi8vaXRzdC5kay9vaW9zYW1sL2Jhc2ljX3ByaXZpbGVnZV9wcm9maWxlIj48UHJpdmlsZWdlR3JvdXAgU2NvcGU9InVybjpkazpnb3Y6c2FtbDpDdnJOdW1iZXJJZGVudGlmaWVyOjM0MDUxMTc4Ij48UHJpdmlsZWdlPnVybjpkazpwcml2aWxlZ2llX2FkbWluPC9Qcml2aWxlZ2U+PC9Qcml2aWxlZ2VHcm91cD48L2JwcDpQcml2aWxlZ2VMaXN0Pg== &lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;dk:gov:saml:attribute:ProductionUnitIdentifier&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;dk:gov:saml:attribute:SENumberIdentifier&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;dk:gov:saml:attribute:UserAdministratorIndicator&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue&gt;&lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;urn:oid:0.9.2342.19200300.100.1.3&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:basic&quot;&gt; &lt;AttributeValue/&gt; &lt;/Attribute&gt; &lt;Attribute Name=&quot;urn:liberty:disco:2006-08:DiscoveryEPR&quot;&gt; &lt;AttributeValue&gt; PEFzc2VydGlvbiBJRD0iX2QzNzMzZDIwLWI3YTItNDVlZC1iZDEzLTI2YWU1OGVkMThhMSIgSXNzdWVJbnN0YW50PSIyMDE3LTA1LTMxVDIwOjA1OjAyLjk1OFoiIFZlcnNpb249IjIuMCIgeG1sbnM9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxJc3N1ZXI+aHR0cHM6Ly9zYW1sLm5lbWxvZy1pbi5kazwvSXNzdWVyPjxkczpTaWduYXR1cmUgeG1sbnM6ZHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPjxkczpTaWduZWRJbmZvPjxkczpDYW5vbmljYWxpemF0aW9uTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIiAvPjxkczpTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2IiAvPjxkczpSZWZlcmVuY2UgVVJJPSIjX2QzNzMzZDIwLWI3YTItNDVlZC1iZDEzLTI2YWU1OGVkMThhMSI+PGRzOlRyYW5zZm9ybXM+PGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIiAvPjxkczpUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiIC8+PC9kczpUcmFuc2Zvcm1zPjxkczpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiIC8+PGRzOkRpZ2VzdFZhbHVlPnNqU250MWpCRmcyQmdHdnVnOUwzS21BQVYvRm9BSFhKcVJOUXFHSDZQZXM9PC9kczpEaWdlc3RWYWx1ZT48L2RzOlJlZmVyZW5jZT48L2RzOlNpZ25lZEluZm8+PGRzOlNpZ25hdHVyZVZhbHVlPmpzSlFUWDJGdDVKdW1lN1Bia090VkdWZFo5VDFCRFA1OHRDd3dDTUJrd043c2RCWEpPd0R2VW1yTEJSd1pkdEZTVkVGWklHd0pNM0lyTmpvZDlYVStONU9xT01HMmkzWW1SMENBVGMveDE0UkhkSnlQU0lxdStFemV2eTVDVkR1cHUzQTVRbllJRUU4dmtnbExaUC9qYkZKNSs3KzB4YWFTazF4ekNaeGE0WjdGTVBMQUlLZS9veThaWDlYZkhtR3NORSs4dkxSd21wUXJ3aVc0WVQwaitqTENVZ0pWN0tzYktUbVdPdWZiQnIwQ1hJVUtneG16TjZUSVhQVXRZc1lKT1VHcHFoSkhSWk03UjliRzZaNzV1NVBudGNsNS9xQkpkcFBlRmtTYmVIdW1ROXZBY3hFY0dvem1BOCtZYVVDQ2pwNVhaazY2RU5VK3VhY0xhL1RyQT09PC9kczpTaWduYXR1cmVWYWx1ZT48S2V5SW5mbyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+PFg1MDlEYXRhPjxYNTA5Q2VydGlmaWNhdGU+TUlJR0tUQ0NCUkdnQXdJQkFnSUVXQmtEOFRBTkJna3Foa2lHOXcwQkFRc0ZBREJITVFzd0NRWURWUVFHRXdKRVN6RVNNQkFHQTFVRUNnd0pWRkpWVTFReU5EQTRNU1F3SWdZRFZRUUREQnRVVWxWVFZESTBNRGdnVTNsemRHVnRkR1Z6ZENCWVNWZ2dRMEV3SGhjTk1UY3dOREl3TURneE9EVTJXaGNOTWpBd05ESXdNRGd4T0RJMldqQ0JsakVMTUFrR0ExVUVCaE1DUkVzeE1UQXZCZ05WQkFvTUtFUnBaMmwwWVd4cGMyVnlhVzVuYzNOMGVYSmxiSE5sYmlBdkx5QkRWbEk2TXpRd05URXhOemd4VkRBZ0JnTlZCQVVUR1VOV1Vqb3pOREExTVRFM09DMUdTVVE2TlRZNU5EQTBNVE13TUFZRFZRUUREQ2xPWlcxTWIyY3RhVzRnUVVSR1V5QlVaWE4wSUNobWRXNXJkR2x2Ym5OalpYSjBhV1pwYTJGMEtUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUp1Nm5GK0oxKzVMZm5PY0YxSWV0QU02UkQ5V0ErNVNQYmZtTVpGY3R5ZzR5aWZaTDJwcGtXN1hVQjVBVWRac0ZIcHFGYlprVEtiQ2VaRkpJcGlyYWVCRFFadEh0N21kSHRMOC9VRjI2MkZDR1pkSXFQNzdLY3QzMjNyaFljUXFkOUhmVTVpSEpaSjFEK0gyek5kaHF4bkVHc1RIaXZ2ZzVRMnF0VFVOaCtuWnFvQWVCeFBLRWczcEhraHJzNFFYcVBQSyt5QkVjTzhza2hxZHBNdUhCV3pvMGNpVUt6L1M4b3FPN3k4d3lTcVIycDZ0WkNWSU1KZzZncXdOZVV6YnhPUFJ5MU1EazJLWE5YZEk2eEdYdFlRL25VTm54U1VsOTkvRHgwTnhFWHhNeW5aNmRKSUwwUnRxVGZhd3RtR2VSMjVMQzNpRTBXb0xhZU5CZ1RubXlqOENBd0VBQWFPQ0Fzc3dnZ0xITUE0R0ExVWREd0VCL3dRRUF3SUR1RENCbHdZSUt3WUJCUVVIQVFFRWdZb3dnWWN3UEFZSUt3WUJCUVVITUFHR01HaDBkSEE2THk5dlkzTndMbk41YzNSbGJYUmxjM1F4T1M1MGNuVnpkREkwTURndVkyOXRMM0psYzNCdmJtUmxjakJIQmdnckJnRUZCUWN3QW9ZN2FIUjBjRG92TDJZdVlXbGhMbk41YzNSbGJYUmxjM1F4T1M1MGNuVnpkREkwTURndVkyOXRMM041YzNSbGJYUmxjM1F4T1MxallTNWpaWEl3Z2dFZ0JnTlZIU0FFZ2dFWE1JSUJFekNDQVE4R0RTc0dBUVFCZ2ZSUkFnUUdCQUl3Z2Ywd0x3WUlLd1lCQlFVSEFnRVdJMmgwZEhBNkx5OTNkM2N1ZEhKMWMzUXlOREE0TG1OdmJTOXlaWEJ2YzJsMGIzSjVNSUhKQmdnckJnRUZCUWNDQWpDQnZEQU1GZ1ZFWVc1SlJEQURBZ0VCR29HclJHRnVTVVFnZEdWemRDQmpaWEowYVdacGEyRjBaWElnWm5KaElHUmxibTVsSUVOQklIVmtjM1JsWkdWeklIVnVaR1Z5SUU5SlJDQXhMak11Tmk0eExqUXVNUzR6TVRNeE15NHlMalF1Tmk0MExqSXVJRVJoYmtsRUlIUmxjM1FnWTJWeWRHbG1hV05oZEdWeklHWnliMjBnZEdocGN5QkRRU0JoY21VZ2FYTnpkV1ZrSUhWdVpHVnlJRTlKUkNBeExqTXVOaTR4TGpRdU1TNHpNVE14TXk0eUxqUXVOaTQwTGpJdU1JR3JCZ05WSFI4RWdhTXdnYUF3UEtBNm9EaUdObWgwZEhBNkx5OWpjbXd1YzNsemRHVnRkR1Z6ZERFNUxuUnlkWE4wTWpRd09DNWpiMjB2YzNsemRHVnRkR1Z6ZERFNUxtTnliREJnb0Y2Z1hLUmFNRmd4Q3pBSkJnTlZCQVlUQWtSTE1SSXdFQVlEVlFRS0RBbFVVbFZUVkRJME1EZ3hKREFpQmdOVkJBTU1HMVJTVlZOVU1qUXdPQ0JUZVhOMFpXMTBaWE4wSUZoSldDQkRRVEVQTUEwR0ExVUVBd3dHUTFKTU1UQTJNQjhHQTFVZEl3UVlNQmFBRk13Q1ZRemtnWFN2SUZUVkVSUlhuSkZTT0grZ01CMEdBMVVkRGdRV0JCUm40MElBZ1V5R05CTEllOVdWcGc0ZHAydzZyekFKQmdOVkhSTUVBakFBTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFBTkxCTzhoRitaeXhrSFpyeWhwNmhMSVBpOXRIMlRXWk5ZdnYvWTlOVy90V1dtVllrZ05OQWVjd3BZc201RXpNQW1sSmlZRjBLeFpaMGpNSWN5VU0xcTZhRzhUT255bThuREt3N2tYTmVnTGpIN1pPL3VoUGFiUnRDYUpteXJZVW53UmpnSFZtQjJoOHJzZnFWM0FDZENBUk9HOE9TU2dGZE1zOWhUSExRTE9CeG5iaFhEK09odjh0YUFyS25YdmdTRWI0amJZYTc4U0orV0QvOE92M0NJbG0vaUFCYlR3UE91MW9xYSsyYzNtVVJ6Z0VaWmxVQWI4c29yKzBJZzFRVzN6aWNEY0lWVlZrK0VtVjlTVU14T1I0Mzd3VEoyS1l2VTZYemlUdXBDZ01XTG1yWTUybElKK3VTNFhNTm14b2M2MGFqVXlVWlhGWUVoVlFrSDg1UXY8L1g1MDlDZXJ0aWZpY2F0ZT48L1g1MDlEYXRhPjwvS2V5SW5mbz48L2RzOlNpZ25hdHVyZT48U3ViamVjdD48TmFtZUlEIEZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6MS4xOm5hbWVpZC1mb3JtYXQ6WDUwOVN1YmplY3ROYW1lIj5DPURLLE89RGlnaXRhbGlzZXJpbmdzc3R5cmVsc2VuIC8vIENWUjozNDA1MTE3OCxDTj1UaG9tYXMgw4VsYsOmayxTZXJpYWw9Q1ZSOjM0MDUxMTc4LVJJRDo5MDg5NzcwMjwvTmFtZUlEPjxTdWJqZWN0Q29uZmlybWF0aW9uIE1ldGhvZD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmNtOmhvbGRlci1vZi1rZXkiPjxTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBhOnR5cGU9IktleUluZm9Db25maXJtYXRpb25EYXRhVHlwZSIgeG1sbnM6YT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiPjxLZXlJbmZvIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj48WDUwOURhdGE+PFg1MDlDZXJ0aWZpY2F0ZT5NSUlHSFRDQ0JRV2dBd0lCQWdJRVV4QVhxREFOQmdrcWhraUc5dzBCQVFzRkFEQkhNUXN3Q1FZRFZRUUdFd0pFU3pFU01CQUdBMVVFQ2d3SlZGSlZVMVF5TkRBNE1TUXdJZ1lEVlFRRERCdFVVbFZUVkRJME1EZ2dVM2x6ZEdWdGRHVnpkQ0JZU1ZnZ1EwRXdIaGNOTVRVd09ESTRNVEExTlRFMldoY05NVGd3T0RJNE1UQTFOREl6V2pDQml6RUxNQWtHQTFVRUJoTUNSRXN4TVRBdkJnTlZCQW9NS0VScFoybDBZV3hwYzJWeWFXNW5jM04wZVhKbGJITmxiaUF2THlCRFZsSTZNelF3TlRFeE56Z3hTVEFnQmdOVkJBVVRHVU5XVWpvek5EQTFNVEUzT0MxR1NVUTZNek0yT1RBM01EQXdKUVlEVlFRRERCNVRVREVnVkVWVFZDQW9ablZ1YTNScGIyNXpZMlZ5ZEdsbWFXdGhkQ2t3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQ1pxRlo5WmNHTDRrVHBYL2NvWGJsSCswbS94SVFPc0s2bFZpRVhUM25DVmtrZmhaNEJCZE9palk5T2hSWEw3cXgxdWpVQU1YSG1NVjVyWlJUWE15bUdPSExMY0FXVTRpSFo5QTJSZU8xTS9BcWhSa0diaFhUWUVybWdaRzhLakRZMTVpVWU4aTNYOG0zNU5wbWc2d3V1RjUya3QrSUh3ZkRPQmMyUVhzSVVNOElXcklVNDJ5VGxjSExIQXF0ZnczYzUwT2xJZ09VdVljQzZBd3VXOHdodW5VWXpUY1lCOFUvWE8wSEVOTlEwVmJrUlBXUkpBU1hUNEV3Z2tBeTV6YTJIblRSWEs1YlU0WU5zS0ZzWGhGNElRamhJUlh4eGRCejNrUThDVlhFS2tKV2xuK2RPa0VaT0FKUENhQXBwaDUvRDdjZjlQczF4cHkrbmg2WGVzNVdSQWdNQkFBR2pnZ0xLTUlJQ3hqQU9CZ05WSFE4QkFmOEVCQU1DQTdnd2daY0dDQ3NHQVFVRkJ3RUJCSUdLTUlHSE1Ed0dDQ3NHQVFVRkJ6QUJoakJvZEhSd09pOHZiMk56Y0M1emVYTjBaVzEwWlhOME1Ua3VkSEoxYzNReU5EQTRMbU52YlM5eVpYTndiMjVrWlhJd1J3WUlLd1lCQlFVSE1BS0dPMmgwZEhBNkx5OW1MbUZwWVM1emVYTjBaVzEwWlhOME1Ua3VkSEoxYzNReU5EQTRMbU52YlM5emVYTjBaVzEwWlhOME1Ua3RZMkV1WTJWeU1JSUJJQVlEVlIwZ0JJSUJGekNDQVJNd2dnRVBCZzByQmdFRUFZSDBVUUlFQmdRQ01JSDlNQzhHQ0NzR0FRVUZCd0lCRmlOb2RIUndPaTh2ZDNkM0xuUnlkWE4wTWpRd09DNWpiMjB2Y21Wd2IzTnBkRzl5ZVRDQnlRWUlLd1lCQlFVSEFnSXdnYnd3REJZRlJHRnVTVVF3QXdJQkFScUJxMFJoYmtsRUlIUmxjM1FnWTJWeWRHbG1hV3RoZEdWeUlHWnlZU0JrWlc1dVpTQkRRU0IxWkhOMFpXUmxjeUIxYm1SbGNpQlBTVVFnTVM0ekxqWXVNUzQwTGpFdU16RXpNVE11TWk0MExqWXVOQzR5TGlCRVlXNUpSQ0IwWlhOMElHTmxjblJwWm1sallYUmxjeUJtY205dElIUm9hWE1nUTBFZ1lYSmxJR2x6YzNWbFpDQjFibVJsY2lCUFNVUWdNUzR6TGpZdU1TNDBMakV1TXpFek1UTXVNaTQwTGpZdU5DNHlMakNCcWdZRFZSMGZCSUdpTUlHZk1EeWdPcUE0aGpab2RIUndPaTh2WTNKc0xuTjVjM1JsYlhSbGMzUXhPUzUwY25WemRESTBNRGd1WTI5dEwzTjVjM1JsYlhSbGMzUXhPUzVqY213d1g2QmRvRnVrV1RCWE1Rc3dDUVlEVlFRR0V3SkVTekVTTUJBR0ExVUVDZ3dKVkZKVlUxUXlOREE0TVNRd0lnWURWUVFEREJ0VVVsVlRWREkwTURnZ1UzbHpkR1Z0ZEdWemRDQllTVmdnUTBFeERqQU1CZ05WQkFNTUJVTlNURE00TUI4R0ExVWRJd1FZTUJhQUZNd0NWUXprZ1hTdklGVFZFUlJYbkpGU09IK2dNQjBHQTFVZERnUVdCQlFITkNiY1NYamlsc0syKytRUjRoblVpZUV6ZHpBSkJnTlZIUk1FQWpBQU1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQXREbjJ3S1k3YzRmTkNHRHpOUFlnVnVSVGZzdmJxWUdJRm9FbnpheWhCekF0WU9sT041Ykw0S2FwQjkvbEFsczliS2tGU20xUkZqYSsweVpVMmV4M2l6dVpEMjZqaWlJZlk4WWNsUGZEL25MVkFVUjBzSTlubmg1WVQxblN2TisxVU9PL1Q3RVpLRkpaZGZtZXd3elFGSWZkMHpPQW5Sc01MY3UwbW8zM2M1UU9XOG8rcVU2NWpVUXdVUzNmSHhmdXljNERZYlNra2ZxcjFudEhxazJEY0xXcnFBdjlNNis3aXNoNEZvWjRkYnVic0s5L2t6OENTVXF6ekRBUUptMTh5eUNUWkVnY3o3NmJOdHB1enVkSzlwR3F0WlgrNGtsNjJPaWgwSTI1MWRBamdvNzJ3bjhmOWNiNjNVYlQ0elJUSmkrZXpCU0NBQXVGTEMvRjdkbmt1PC9YNTA5Q2VydGlmaWNhdGU+PC9YNTA5RGF0YT48L0tleUluZm8+PC9TdWJqZWN0Q29uZmlybWF0aW9uRGF0YT48L1N1YmplY3RDb25maXJtYXRpb24+PC9TdWJqZWN0PjxDb25kaXRpb25zIE5vdE9uT3JBZnRlcj0iMjAxNy0wNS0zMVQyMjowNTowMi45NThaIj48QXVkaWVuY2VSZXN0cmljdGlvbj48QXVkaWVuY2U+aHR0cHM6Ly9ib290c3RyYXAuc3RzLm5lbWxvZy1pbi5kay88L0F1ZGllbmNlPjwvQXVkaWVuY2VSZXN0cmljdGlvbj48L0NvbmRpdGlvbnM+PEF0dHJpYnV0ZVN0YXRlbWVudD48QXR0cmlidXRlIE5hbWU9ImRrOm5lbWxvZ2luOnNhbWw6YXR0cmlidXRlOklkUFNlc3Npb25JbmRleCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PEF0dHJpYnV0ZVZhbHVlPjVELTg0LUUyLUUyLThFLUZBLTg3LTM4LTI2LUI0LUM4LUMwLTRBLUZBLUI0LTE5LUJDLTIwLTc3LUQxPC9BdHRyaWJ1dGVWYWx1ZT48L0F0dHJpYnV0ZT48QXR0cmlidXRlIE5hbWU9ImRrOm5lbWxvZ2luOnNhbWw6YXR0cmlidXRlOlNwRW50aXR5SWQiIE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxBdHRyaWJ1dGVWYWx1ZT5odHRwczovL3NhbWwuc3AxLnRlc3QtbmVtbG9nLWluLmRrLzwvQXR0cmlidXRlVmFsdWU+PC9BdHRyaWJ1dGU+PC9BdHRyaWJ1dGVTdGF0ZW1lbnQ+PC9Bc3NlcnRpb24+ &lt;/AttributeValue&gt; &lt;/Attribute&gt; &lt;/AttributeStatement&gt; &lt;AuthnStatement AuthnInstant=&quot;2017-05-31T20:05:02.506Z&quot; SessionIndex=&quot;_db2695fb-2914-4cd7-8658-2266428c3874&quot;&gt; &lt;AuthnContext&gt; &lt;AuthnContextClassRef&gt;urn:oasis:names:tc:SAML:2.0:ac:classes:X509&lt;/AuthnContextClassRef&gt; &lt;/AuthnContext&gt; &lt;/AuthnStatement&gt; &lt;/Assertion&gt;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Graph" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="ResultCollector.success_only_logging">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="ResultCollector.success_only_logging">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

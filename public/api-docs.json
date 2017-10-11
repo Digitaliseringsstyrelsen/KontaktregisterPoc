@@ -1,0 +1,945 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Registry",
+    "description": "Basic usage of the DS api",
+    "license": {
+      "name": "MIT",
+      "url": ""
+    }
+  },
+  "host": "localhost",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/contacts/11111111": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get contact",
+        "tags": [
+          "Contact GET"
+        ],
+        "operationId": "get contact",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetContactresponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/contacts/11111111/log": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get contact log",
+        "tags": [
+          "Contact GET"
+        ],
+        "operationId": "get contact log",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetContactLogresponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/contacts/11111111/medias": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get contact medias",
+        "tags": [
+          "Contact GET"
+        ],
+        "operationId": "get contact medias",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetContactMediasresponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/contacts/11111111/subscriptions": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get contact subscriptions",
+        "tags": [
+          "Contact GET"
+        ],
+        "operationId": "get contact subscriptions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetContactSubscriptionsresponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/contacts/11111111/subscriptions/4": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get contact subscription",
+        "tags": [
+          "Contact GET"
+        ],
+        "operationId": "get contact subscription",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetContactSubscriptionresponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/terms": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "terms",
+        "tags": [
+          "Terms"
+        ],
+        "operationId": "terms",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/TermsResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "search multiple",
+        "tags": [
+          "Search"
+        ],
+        "operationId": "search multiple",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SearchMultipleresponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/contacts/": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "Terms",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Terms",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/TermsRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/contacts/",
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "body": "{\"type\":\"person\",\"identifier\":9}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Terms",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetContactresponse": {
+      "title": "get contactResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "Media": {
+      "title": "Media",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "number": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "number"
+      ]
+    },
+    "Subscription": {
+      "title": "Subscription",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media4"
+          }
+        },
+        "accepted_terms": {
+          "$ref": "#/definitions/AcceptedTerms"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "medias",
+        "accepted_terms"
+      ]
+    },
+    "Media4": {
+      "title": "Media4",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data5"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "data"
+      ]
+    },
+    "Data5": {
+      "title": "Data5",
+      "type": "object",
+      "properties": {
+        "first_name": {
+          "description": "",
+          "type": "string"
+        },
+        "last_name": {
+          "description": "",
+          "type": "string"
+        },
+        "address": {
+          "description": "",
+          "type": "string"
+        },
+        "zipcode": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "city": {
+          "description": "",
+          "type": "string"
+        },
+        "country": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "address",
+        "zipcode",
+        "city",
+        "country"
+      ]
+    },
+    "AcceptedTerms": {
+      "title": "AcceptedTerms",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "version": {
+          "description": "",
+          "type": "string"
+        },
+        "latest": {
+          "description": "",
+          "type": "boolean"
+        },
+        "accepted_at": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "latest",
+        "accepted_at"
+      ]
+    },
+    "GetContactLogresponse": {
+      "title": "get contact logResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "GetContactMediasresponse": {
+      "title": "get contact mediasResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "GetContactSubscriptionsresponse": {
+      "title": "get contact subscriptionsResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "GetContactSubscriptionresponse": {
+      "title": "get contact subscriptionResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "TermsResponse": {
+      "title": "termsResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "SearchNoResultresponse": {
+      "title": "search no resultResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "SearchMixResultresponse": {
+      "title": "search mix resultResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "SearchSingleResultresponse": {
+      "title": "search single resultResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "SearchMultipleresponse": {
+      "title": "search multipleResponse",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "medias": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Media"
+          }
+        },
+        "subscriptions": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subscription"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "identifier",
+        "medias",
+        "subscriptions"
+      ]
+    },
+    "TermsRequest": {
+      "title": "TermsRequest",
+      "example": {
+        "type": "person",
+        "identifier": 9
+      },
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "type",
+        "identifier"
+      ]
+    }
+  }
+}
